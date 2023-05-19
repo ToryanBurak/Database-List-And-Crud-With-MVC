@@ -1,0 +1,26 @@
+﻿@model IndexVM 
+@{
+    ViewBag.Title = "EmployeeList";
+}
+
+<h2>EmployeeList</h2>
+Çalışan Eklemek için @Html.ActionLink("Tıklayınız","AddEmployee","Employee")
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Employee item in Model.Employees)
+            {
+                <tr>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                </tr>
+            }
+    </tbody>
+</table>
+
+

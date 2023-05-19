@@ -1,0 +1,23 @@
+﻿@model Employee
+@{
+    ViewBag.Title = "AddEmployee";
+}
+
+<h2>AddEmployee</h2>
+<div class="container">
+    Çalışan Listesine Dönmek İçin @Html.ActionLink("Tıklayınız","EmployeeList","Employee")
+</div>
+<div class="container">
+    @using (Html.BeginForm("AddEmployee", "Employee", FormMethod.Post))
+    {
+        @Html.TextBoxFor(x => x.FirstName, new { placeholder = "İsim Giriniz..." })
+        <br />
+        <br />
+        @Html.TextBoxFor(x => x.LastName, new { placeholder = "Soyisim Giriniz..." })
+        <button>Ekle</button>
+    }
+
+</div>
+
+
+
